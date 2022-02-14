@@ -4,8 +4,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgb(131,58,180);
-  background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+  background: rgb(46, 44, 48);
+  background-image: linear-gradient(to right top, #000000, #1b0f19, #361d3d, #2f1c4e, #1e1e4d, #1e2b49, #172f4b, #0a1e2b, #081b22, #0f2c31, #174447, #194e4b);
   color: white;
   height: 100%;
 }
