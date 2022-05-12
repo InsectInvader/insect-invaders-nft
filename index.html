@@ -148,13 +148,15 @@ document.addEventListener("DOMContentLoaded", async () => {
     console.log('error: ', e);
     if (e.message.includes('Provider not set or invalid')) {
       document.querySelector(".box").innerHTML = `<div style="border: cyan 1px solid; border-radius:5px;">
-        <p>Plase Login to MetaMask & refresh your browser. 🦊</p></div>`
+        <img style="width: 66px !important;height: 60px" src="./assets/insect.gif" alt="InsectInvader">
+        <p>Plase Login to MetaMask & refresh your browser.</p></div>`
 
     } else {
       document.querySelector(".box").innerHTML = `<div style="border: cyan 1px solid; border-radius:5px;">
-        <p>
-          h1>${e.message.toLowerCase()}</h1>
-          </p></div>`
+        <img style="width: 66px !important;height: 60px" src="./assets/insect.gif" alt="InsectInvader">
+
+          <p>${e.message.toLowerCase()}</p>
+          </div>`
     }
     
   }
