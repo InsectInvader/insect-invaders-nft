@@ -1,5 +1,10 @@
+@font-face {
+  font-family: "PixeloidMono";
+  src: url("./assets/PixeloidMono.ttf");
+}
+
 body {
-  font-family: monospace;
+  font-family: PixeloidMono;
   font-size: 12px;
   display: flex;
   justify-content: center;
@@ -9,6 +14,29 @@ body {
   color: white;
   height: 100%;
 }
+
+.alpy {
+  pointer-events: none;
+}
+
+.title {
+  position: absolute;
+  top: 0;
+  margin: 45px auto 0 auto;
+}
+
+.mintButton {
+  border: 1px solid cyan;
+  border-radius: 5px;
+  font-family: PixeloidMono;
+  font-size: 20px;
+
+}
+
+.mintButton:hover {
+  cursor: pointer;
+}
+
 .box {
   max-width: 400px;
   text-align: center;
