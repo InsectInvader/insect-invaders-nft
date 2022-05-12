@@ -1,6 +1,22 @@
 <html>
-  <img class="title" src="./assets/blackinvader.png" alt="">
-<head>
+  <div class="header">
+    <div class="socialIcons">
+      <a target="_blank" href="https://opensea.io/collection/genesis-insect-invaders">
+        <img class="social" src="./assets/opensea-wt.png" alt="OpenSeaIcon">
+      </a>
+
+      <a target="_blank" href="https://twitter.com/Alpha_Invaders">
+        <img class="social" src="./assets/twitter-wt.png" alt="TwitterIcon">
+      </a>
+
+      <a target="_blank" href="https://etherscan.io/address/0xbC7BB71d452692B8fd09991409d701Ee3D72624E">
+        <img class="social" src="./assets/contract-wt.png" alt="ContractIcon">
+      </a>
+
+    </div>
+    <img class="title" src="./assets/blackinvader.png" alt="AlphaInvadersBanner">
+
+   </div><head>
   <title>Alpha Invaders NFT Mint</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,8 +30,18 @@
 <script id="template" type="text/x-handlebars-template">
   <img class="alpy"  src="./assets/alphainvaders.gif">
   <!-- <h1><a href=".">{{title}}</a></h1> -->
-  <div class='label'>{{price}}</div>
-  <div class='label'>{{current}}/{{supply}}</div>
+  <div style="display: flex; justify-content: space-between;">
+    <img style="width: 66px !important;height: 60px" src="./assets/insect.gif" alt="AlphaInvadersBanner">
+
+    <div>
+      <div class='label'>{{price}}</div>
+      <div class='label'>{{current}}/{{supply}}</div>
+    </div>
+    
+    <img style="width: 66px !important;height: 60px" src="./assets/insect.gif" alt="AlphaInvadersBanner">
+  
+  </div>
+ 
   <div class='minter'>
     <select id='count'>
       <option value="" selected disabled hidden>Select mint count</option>
@@ -149,4 +175,11 @@ document.addEventListener("DOMContentLoaded", async () => {
 <body>
 <div class='box'></div>
 </body>
+<footer style="bottom: 0; position: fixed;">
+  <p id="year"></p>
+</footer>
+<script>
+ var year = new Date().getFullYear().toString()
+ document.getElementById('year').innerHTML = `Alpha Invaders 👾 ${year}`
+</script>
 </html>

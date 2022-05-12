@@ -15,6 +15,25 @@ body {
   height: 100%;
 }
 
+.socialIcons {
+  display: flex; 
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+
+.header {
+  position: absolute; top: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.social {
+width: 35px;
+height: 35px;
+margin: 14px;
+} 
+
 .alpy {
   pointer-events: none;
 }
@@ -22,7 +41,7 @@ body {
 .title {
   position: absolute;
   top: 0;
-  margin: 45px auto 0 auto;
+  margin: 55px auto 0 auto;
 }
 
 .mintButton {
@@ -144,3 +163,9 @@ tr a {
   text-align: center;
   font-size: 12px;
 }
+
+@media only screen and (max-height: 500px) {
+  footer {
+    display: none;
+  }
+  }
