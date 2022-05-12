@@ -102,17 +102,26 @@ content="Alpha Invaders NFT"
 </script>
 <script>
 
+
+try {
+  min
+} catch (error) {
+  
+}
+
 const f0 = new F0()
 const web3= new Web3(window.ethereum)
 const template = Handlebars.compile(document.querySelector("#template").innerHTML);
 document.addEventListener("DOMContentLoaded", async () => {
-  let config = await fetch("box.json").then((r) => {
+  
+  try {
+    let config = await fetch("box.json").then((r) => {
     return r.json()
   })
   let net = await web3.eth.getChainId()
   // console.log("net = ", net)
   await window.ethereum.send('eth_requestAccounts');
-  try {
+
     await f0.init({
       web3: web3,
       contract: config.contract,
