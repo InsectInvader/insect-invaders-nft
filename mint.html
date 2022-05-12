@@ -1,8 +1,8 @@
 <html>
-  <img style="  position: absolute;
-  top: 0;
-  margin: 45px auto 0 auto;" class="title" src="./assets/blackinvader.png" alt="">
+  <img class="title" src="./assets/blackinvader.png" alt="">
 <head>
+  <title>Alpha Invaders NFT Mint</title>
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
 <script src="https://unpkg.com/nice-select2@1.0.0/dist/js/nice-select2.js"></script>
@@ -63,11 +63,10 @@ document.addEventListener("DOMContentLoaded", async () => {
       network: c.network
     })
 
-    console.log('jeee??? ', key);
-
     let invite = await f0.invite(key)
-    console.log('invites ', invite);
+
     let placeholder = await f0.placeholder()
+
     const name = await f0.name()
     const symbol = await f0.symbol()
     const nextId = await f0.nextId()
@@ -100,11 +99,9 @@ document.addEventListener("DOMContentLoaded", async () => {
         document.querySelector(".minter").classList.remove("hidden")
       } else {
 
-    console.log('else ', count);
         
       try {
         let tokens = await f0.mint(key, count)
-              console.log(tokens);
 
               document.querySelector(".loading").classList.add("hidden")
               document.querySelector(".console").innerHTML = mintTemplate({
@@ -117,6 +114,8 @@ document.addEventListener("DOMContentLoaded", async () => {
                 })
               })
       } catch (error) {
+
+        console.log('max mint error ', error);
 
         document.querySelector(".loading").classList.add("hidden")
         document.querySelector(".minter").classList.remove("hidden")

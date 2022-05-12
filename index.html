@@ -3,13 +3,46 @@
 <img class="title" src="./assets/blackinvader.png" alt="">
 
 <head>
+  <title>Alpha Invaders NFT Mint</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" href="./assets/alpy.jpg" />
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 <link href="style.css" rel="stylesheet">
+
+
+
+<meta
+property="description"
+content="An alpha community using subscription tools and customized tools to share information between members! 👾"
+/>
+<meta name="keywords" content="nft,nfts,web3,art" />
+<meta name="author" content="Invader,Afrotonder" />
+
+<meta property="og:type" content="site" />
+<meta
+property="og:title"
+content="Alpha Invaders NFT"
+/>
+<meta
+property="og:description"
+content="An alpha community using subscription tools and customized tools to share information between members! 👾"
+/>
+<meta property="og:image" content="./assets/blackinvader.png" />
+<meta name="twitter:image" content="./assets/blackinvader.png" />
+<meta
+property="og:site_name"
+content="Alpha Invaders NFT"
+/>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.7.0-rc.0/web3.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
 <script src="https://unpkg.com/f0js@0.0.12/dist/f0.js"></script>
 <script id="template" type="text/x-handlebars-template">
+
+
+
+
+
+
  
   <img class="alpy" src="./assets/alphainvaders.gif">
   <!-- <h1>{{title}}</h1> -->
@@ -49,7 +82,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     return r.json()
   })
   let net = await web3.eth.getChainId()
-  console.log("net = ", net)
+  // console.log("net = ", net)
   await window.ethereum.send('eth_requestAccounts');
   try {
     await f0.init({
@@ -75,6 +108,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       })
     })
   } catch (e) {
+    console.log('error: ', e);
     document.querySelector(".box").innerHTML = `<h1>${e.message.toLowerCase()}</h1>`
   }
 })
